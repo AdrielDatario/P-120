@@ -52,19 +52,22 @@ function setup() {
 function draw() {
   if(draw_apple == "set")
   {
-    for(var i = 1; 1<= to_number; i++){
+    for(var i = 1 ; i <= to_number; i++)
+    {
       x = Math.floor(Math.random() * 700);
       y = Math.floor(Math.random() * 400);
       image(apple, x, y, 50, 50);
-      console.log("i");
     }
     document.getElementById("status").innerHTML = to_number + " Apples drawn";
-    console.log("Apple's Draw");
-    speak_data = to_number+"Apple's Draw";
+    speak_data = to_number + "Apples drawn";
     speak();
     draw_apple = "";
   }
 }
+
+
+
+
 
 function speak(){
     var synth = window.speechSynthesis;
